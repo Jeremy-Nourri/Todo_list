@@ -1,0 +1,103 @@
+@use "src/styles/index";
+
+.tasks-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.task-row {
+  width: 100%;
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem auto;
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin-right: 0.5rem;
+  }
+
+  &__input {
+    width: 100%;
+    @include index.row-item;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin-right: 0.5rem;
+  }
+  
+  &__text {
+    width: 100%;
+    margin-right: 0.5rem;
+    background-color: #e5e5e5a0;
+    @include index.row-item;  
+    cursor: move;
+    cursor: -webkit-grabbing;
+
+    &:hover {
+    color: #fff;
+    background-color: #416eaa;
+    }
+
+    &--done {
+      text-decoration: line-through;
+      color: #a0a0a0;
+    }
+  }
+        
+  &__icons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    background-color: #fff;
+    border: none;
+    padding: 0;
+    margin: 0 0.3rem;
+
+    &-icon {
+      display: block;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    &-text{
+      @include index.screen-reader;
+    }
+  }
+
+}
+
+@media (max-width: 500px) { 
+  .task-row {
+    margin: 0.3rem auto;
+
+    &__input {
+      @include index.row-item--phone;
+      
+      &::placeholder {
+        font-size: 0.8rem;
+      }
+    }
+
+    &__text {
+      @include index.row-item--phone;
+    }
+  }
+}

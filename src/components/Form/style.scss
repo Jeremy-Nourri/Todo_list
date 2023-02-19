@@ -1,0 +1,69 @@
+@use "src/styles/index";
+
+.form {
+  width: 100%;
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem auto;
+
+  &__input {
+    width: 100%;
+    @include index.row-item;
+    border: none;
+    background-color: #C6D5E9;
+    text-align: center;
+    font-size: 1rem;
+    
+    &::placeholder {
+      text-align: center;
+      font-size: 1rem;
+      color: #000;
+    }
+
+    &:hover {
+      cursor: url(src/assets/img/icon_pen.png) 0 45, auto;
+    }
+  }
+  
+  &__button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 0.8rem;
+    
+    &-icon {
+      display: block;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    &-text {
+      @include index.screen-reader;
+    }
+  }
+
+  &__hide-message {
+    width: 100%;
+    @include index.row-item;
+    background-color: rgb(255, 61, 61);
+  }
+
+}
+
+@media (max-width: 500px) { 
+  .form {
+    &__input {
+      @include index.row-item--phone;
+      
+      &::placeholder {
+        font-size: 0.8rem;
+      }
+    }
+    &__hide-message {
+      @include index.row-item--phone;
+    }
+  }
+}

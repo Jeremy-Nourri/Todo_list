@@ -1,0 +1,62 @@
+@use 'reset';
+@use 'vars';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #faaf16;
+  background-image: url(src/assets/img/background.jpeg);
+  background-position-x: center;
+  background-position-y: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 500px) { 
+  body {
+    background-image: url(src/assets/img/background_mobile.jpeg);
+  }
+}
+
+@mixin row-item {
+  padding: 0.6rem;
+  border: 0.5px solid rgb(65, 64, 64);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+@mixin row-item--phone {
+  padding: 0.4rem;
+  border: 0.3px solid rgb(65, 64, 64);
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: rgb(0, 0, 0);
+}
+
+// hide an element, but leave it available for screen reader
+@mixin screen-reader {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+/* 
+  // or you can import your own font
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+*/
