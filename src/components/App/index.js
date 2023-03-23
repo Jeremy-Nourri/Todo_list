@@ -1,24 +1,16 @@
 /* eslint-disable linebreak-style */
-// == Import npm
 import { useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 
-// == Import components
 import Header from 'src/components/Header';
 import Form from 'src/components/Form';
 import Counter from 'src/components/Counter';
 import Tasks from 'src/components/Tasks';
 
-// == Import utils
 import { getId } from '../../utils/getId';
-
-// == Import data
 import tasks from 'src/data/tasks';
-
-// == Import styles
 import './styles.scss';
 
-// == Component App
 function App() {
 
   const [tasksList, setTaskList] = useState(tasks);

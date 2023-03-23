@@ -1,12 +1,10 @@
-// == Import npm
 import PropTypes from 'prop-types';
 import { Droppable } from 'react-beautiful-dnd';
-// == Import components
+
 import TaskRow from './TaskRow';
-// == Import styles
+
 import './style.scss';
 
-// == Component Tasks
 function Tasks({ tasksList, deleteTask, toggleTask }) {
 
   return ( 

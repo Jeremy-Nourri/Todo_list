@@ -1,12 +1,10 @@
-//== Import : npm
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { BsCheckCircle, BsTrash, BsPencilSquare, BsCheckSquare, BsApp } from 'react-icons/bs';
 import { Draggable } from 'react-beautiful-dnd';
-// == Import styles
+
 import './style.scss';
 
-// == Component TaskRow
 function TaskRow({ id, index, text, done, deleteTask, toggleTask }) {
 
   const [isEditing, setIsEditing] = useState(false);

@@ -1,10 +1,8 @@
-// == Import npm
 import { useState } from 'react';
 import { BsPlusCircle } from 'react-icons/bs';
-// == Import styles
+
 import './style.scss';
 
-// == Component Form
 function Form({ addTask, maxTasks }) {
 
   // i want to store the value of the input in a state
